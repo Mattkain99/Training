@@ -42,11 +42,11 @@ export class HomeComponent implements OnInit {
 
     this.beginnerCourses$ = loadCourses$
       .pipe(
-        map(courses => courses.filter(course => course.category == "BEGINNER"))
+        map(courses => courses.filter(course => course.category === 'BEGINNER'))
       );
     this.advancedCourses$ = loadCourses$
       .pipe(
-        map(courses => courses.filter(course => course.category == "ADVANCED"))
+        map(courses => courses.filter(course => course.category === 'ADVANCED'))
       );
   }
 
